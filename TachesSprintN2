@@ -1,0 +1,26 @@
+*****************************************************************************
+ *  T-REX TEAM : OBJECTIF POUR LE SPRINT N°2
+ *  Original Release: 30 May 2022
+ *
+ *  Copyright (c) T-REX TEAM IUT CACHAN LP MECSE
+ *  All rights reserved.
+ *****************************************************************************
+ 
+ *****************************************************************************
+  MAXIME BENABED:
+  - Envoyer le flux vidéo sur Unreal Engine
+  - Réduire les lags (si possible)
+ *****************************************************************************
+  IBRAHIM ELBAHNSI:
+  - 
+ *****************************************************************************
+  GODEFROY LUCAS:
+  - Terminer la récuperations des commandes des gachettes
+  - Envois des commandes des gachettes à la Raspberry
+  - Mise en place du flux vidéo dans Unreal Engine
+ *****************************************************************************
+  MAXIME JANEZ:
+  - Récuperer les informations des gachettes
+  - Faire fonctionner les moteurs en fonctions des commandes de la
+    Raspberry.
+ *****************************************************************************
