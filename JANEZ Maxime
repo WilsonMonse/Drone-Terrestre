@@ -1,0 +1,65 @@
+#**************************************************** ****************************
+#* <NOM DU FICHIER : "testClientPython">
+#*
+#* ÉQUIPE T-REX <NOM APPLICATION : "Communication client">
+#* Sortie d'origine : 30 mai 2022 ( présentation print 1 )
+#* Par : JANEZ Maxime
+#*	
+#* Description du fichier:
+#* programme python, permet de ce connecter a un serveur en passant par le
+#* protocole TCP/IP et en utilisant les socket pour communiquer
+#*	
+#* Historique des modifications :
+#* 25 mai : version originale
+#*
+#* Copyright (c) EQUIPE T-REX IUT CACHAN LP MECSE
+#* Tous les droits sont réservés.
+#****************************************************** **************************/
+
+import socket
+
+HOST = '192.168.1.103'
+PORT = 8888
+
+print('programme start')
+
+
+
+print('while start')
+client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+print('init connexion au serveur')
+client.connect((HOST, PORT))
+print('Connexion vers ' + HOST + ':' + str(PORT) + ' reussie.')
+#message envoie 
+        #message = 'Hello, world'
+        #n = client.send(message)
+        #print ('Envoi de :' + message)
+        
+        #if (n != len(message)):
+        #        print('Erreur envoi.')
+        #else:
+        #       print ('Envoi ok.')
+
+while(1):
+        
+        print ('Reception...')
+        donnees = client.recv(1024)
+        print ('Recu :', donnees)
+
+        if(donnees == b'$r' or donnees == b'$l' or donnees == b'/q'):
+                
+                if (donnees == b'$r'):
+                        print('moteur droit')
+
+                if (donnees == b'$l'):
+                        print('moteur gauche activé ')
+
+                if (donnees == b'/q'):
+                        print ('Deconnexion')
+                        client.close()
+        else :
+                print('message reçu :', donnees, 'non conforme')
+                
+
+#print ('Deconnexion')
+#client.close()
