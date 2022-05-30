@@ -1,0 +1,36 @@
+/*****************************************************************************
+ *  <NOM DU FICHIER ex: "server.cpp">
+ *
+ *  T-REX TEAM <NOM APPLICATION ex: "Unreal Engine VR Application">
+ *  Original Release: <DATE ex: "MAY 2022">
+ *  By: <VOTRE NOM>
+ *	
+ *	File Description:
+ *	<DESCRIPTION DU PROJET>
+ *	
+ *  Modification History:
+ *    <HISTORIQUE DES MODIFICATIONS>
+ *
+ *  Copyright (c) T-REX TEAM IUT CACHAN LP MECSE
+ *  All rights reserved.
+ *****************************************************************************/
+ 
+ Exemple de bandeau:
+ 
+ /*****************************************************************************
+ *  serverVRClass.cpp
+ *
+ *  T-REX TEAM Unreal Engine VR Application
+ *  Original Release: May 2022
+ *  By: Lucas Godefroy
+ *	
+ *	File Description:
+ *	Code Source de la classe du serveur Winsock pour la communication avec la
+ *	Raspberry PI.
+ *	
+ *  Modification History:
+ *    MAY 24 (LG): Original release
+ *
+ *  Copyright (c) T-REX TEAM IUT CACHAN LP MECSE
+ *  All rights reserved.
+ *****************************************************************************/
