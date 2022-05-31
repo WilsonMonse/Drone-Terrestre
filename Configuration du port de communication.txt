@@ -1,0 +1,19 @@
+Pour pouvoir récupérer le flux video il faut ouvrir le port de communication 8554, 
+pour cela il faut:
+	1/Ouvrir le paneau de configuration, puis aller dans Système et sécurité 
+	  et Pare-feu Windows.
+
+	2/Cliquer sur paramètres avancés
+
+	3/Aller dans règles de trafic entrant, cliquer sur Nouvelle règle.
+
+	4/Cocher la case Port, cliquer sur suivant. 
+	
+	5/Ensuite Cocher UDP puis Ports Ports locaux spécifiques et écrire le numéro 
+	  du port (8554), cliquer sur suivant.
+
+	6/Cocher Autoriser la connexion, cliquer sur suivant.
+
+	7/Cocher toutes les cases et cliquer sur suivant.
+
+	8/Ecrire un nom et cliquer sur terminer.

@@ -1,0 +1,30 @@
+1/Installer l'application THETA sur votre portable
+
+2/Allumer la caméra, si vous ne voyez pas le symbole du wifi sur l'écran de la caméra apuyer 
+  sur le bouton avec le symbole wifi dessiné au-dessus.
+
+3/Lancer l'application, appuyer sur le bouton en bas à droite (juste au-dessus des 
+  Paramètres), puis appuyer sur Mode point d'accès (attention il faut que vous ayez déja 
+  connecter votre portable à la caméra, le mot de passe est 10115068). 
+
+4/Puis aller dans les paramètres, ensuite aller dans paramètres de l'appareil photo
+  et apuyer sur Mode client LAN sans fil.
+
+5/Vérifier dans Paramètres de point d'accès que le routeur_Drone apparait bien, si il n'y
+  à rien alors apuyer sur le bouton +, indiquer l'ID du routeur et son mot de passe, sinon 
+  passer à l'étape suivante.
+
+6/Aller dans Paramètres d'authentification, saisir le mot de passe du routeur et appuyer
+  sur le bouton Spécifier on mot de passe.
+
+7/De retour sur la caméra, appuyer sur le bouton avec le symbole wifi dessiné au-dessus
+  jusqu'à voir sur l'écran le symbole du wifi avec l'abréviation CL écrit à côté.
+
+8/Vous pouvez vérifier avec le cmd que la caméra est bien connecter au réseau avec un ping.
+
+9/Dans VLC, aller dans média, puis dans Ouvrir un flux reseau, ensuite entrer l'Adresse 
+  de récupération du flux video: rtsp://192.168.1.102:8554/live?resolution=1920x960
+  (il ce peut que l'adresse IP de la caméra est changée).
+
+Si vous n'avez pas de flux video suivre le fichier text sur la configuration du port de 
+communication.
