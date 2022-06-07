@@ -1,0 +1,70 @@
+#**************************************************** ****************************
+#* <NOM DU FICHIER : "testClientPython">
+#*
+#* ÉQUIPE T-REX <NOM APPLICATION : "Communication client">
+#* Sortie d'origine : 30 mai 2022 ( présentation print 1 )
+#* Par : JANEZ Maxime
+#*	
+#* Description du fichier:
+#* programme python, permet de ce connecter a un serveur en passant par le
+#* protocole TCP/IP et en utilisant les socket pour communiquer
+#*	
+#* Historique des modifications :
+#* 25 mai : version originale
+#*
+#* Copyright (c) EQUIPE T-REX IUT CACHAN LP MECSE
+#* Tous les droits sont réservés.
+#****************************************************** **************************/
+import socket
+import time
+
+HOST = '192.168.1.108'
+PORT = 5555
+
+print('programme start')
+
+etat = 0
+client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+print('init connexion au serveur')
+client.connect((HOST, PORT))
+etat = 1
+print('Connexion vers ' + HOST + ':' + str(PORT) + ' reussie.')
+#message envoie 
+        #message = 'Hello, world'
+        #n = client.send(message)
+        #print ('Envoi de :' + message)
+        
+        #if (n != len(message)):
+        #        print('Erreur envoi.')
+        #else:
+        #       print ('Envoi ok.')
+
+while(etat == 1):
+
+        print ('Reception...')
+        donnees = client.recv(1024)
+        print ('Recu :', donnees)
+
+        #if(donnees == b'$r0' or donnees == b'$l0' or donnees == b'/q' or donnees == b'$r1' or donnees == b'$l1'):            
+        if (donnees == b'$r1'):
+            print('moteur droit start')
+
+        elif (donnees == b'$r0'):
+            print('moteur droit stop')
+                        
+        elif (donnees == b'$l1'):
+            print('moteur gauche start')
+
+        elif (donnees == b'$l0'):
+            print('moteur gauche stop ')
+                
+        elif (donnees == b'/q'):
+            print ('close connexion')
+            etat = 0
+                
+        #else :
+        #        print('message reçu :', donnees, 'non conforme')
+        #        etat = 0
+
+print ('Deconnexion')
+client.close()
