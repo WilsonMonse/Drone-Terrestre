@@ -1,16 +1,18 @@
 #**************************************************** ****************************
-#* <NOM DU FICHIER : "testClientPython">
+#* <NOM DU FICHIER : "testClientPythonV2">
 #*
-#* ÉQUIPE T-REX <NOM APPLICATION : "Communication client">
-#* Sortie d'origine : 30 mai 2022 ( présentation print 1 )
+#* ÉQUIPE T-REX <NOM APPLICATION : "Communication client et serveur">
+#* Sortie d'origine : 7 juin 2022 ( présentation print 1 )
 #* Par : JANEZ Maxime
 #*	
 #* Description du fichier:
 #* programme python, permet de ce connecter a un serveur en passant par le
-#* protocole TCP/IP et en utilisant les socket pour communiquer
+#* protocole TCP/IP et en utilisant les socket pour communiquer, filtre les envoie 
+#* du serveur et print si massage juste 
 #*	
 #* Historique des modifications :
 #* 25 mai : version originale
+#* 7 juin : version filtrage des messages et communication ok
 #*
 #* Copyright (c) EQUIPE T-REX IUT CACHAN LP MECSE
 #* Tous les droits sont réservés.
