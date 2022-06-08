@@ -1,0 +1,115 @@
+import socket
+import time
+
+ADRESSE = '192.168.1.108'
+PORT = 5555
+
+print('programme start')
+serveur = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+print('avant bind')
+serveur.bind((ADRESSE, PORT))
+print('apres bind')
+serveur.listen(1)
+print('start listen')
+client, adresseClient = serveur.accept()
+print ('Connexion de ', adresseClient)
+
+while True:
+
+    envoie = b'$l1'
+
+    n = client.send(envoie)
+    print ('envoie')
+    if (n != len(envoie)):
+        print ('Erreur envoi.')
+    else:
+        print ('Envoi ok.')
+    time.sleep(5)
+
+    envoie = b'$l0'
+
+    n = client.send(envoie)
+    print ('envoie')
+    if (n != len(envoie)):
+        print ('Erreur envoi.')
+    else:
+        print ('Envoi ok.')
+    time.sleep(5)
+
+    envoie = b'$r1'
+
+    n = client.send(envoie)
+    print ('envoie')
+    if (n != len(envoie)):
+        print ('Erreur envoi.')
+    else:
+        print ('Envoi ok.')
+    print('super')
+    time.sleep(5)
+
+    envoie = b'$r0'
+
+    n = client.send(envoie)
+    print ('envoie')
+    if (n != len(envoie)):
+        print ('Erreur envoi.')
+    else:
+        print ('Envoi ok.')
+    print('super')
+    time.sleep(5)
+
+    envoie = b'$r1'
+
+    n = client.send(envoie)
+    print ('envoie')
+    if (n != len(envoie)):
+        print ('Erreur envoi.')
+    else:
+        print ('Envoi ok.')
+    time.sleep(0)
+    
+    envoie = b'$l1'
+
+    n = client.send(envoie)
+    print ('envoie')
+    if (n != len(envoie)):
+        print ('Erreur envoi.')
+    else:
+        print ('Envoi ok.')
+    time.sleep(10)
+    
+    envoie = b'$r0'
+
+    n = client.send(envoie)
+    print ('envoie')
+    if (n != len(envoie)):
+        print ('Erreur envoi.')
+    else:
+        print ('Envoi ok.')
+    time.sleep(0)
+
+    envoie = b'$l0'
+
+    n = client.send(envoie)
+    print ('envoie')
+    if (n != len(envoie)):
+        print ('Erreur envoi.')
+    else:
+        print ('Envoi ok.')
+    time.sleep(10)
+
+    envoie = b'\q'
+
+    n = client.send(envoie)
+    print ('envoie')
+    if (n != len(envoie)):
+        print ('Erreur envoi.')
+    else:
+        print ('Envoi ok.')
+    time.sleep(10)
+    
+    
+print ('Fermeture de la connexion avec le client.')
+client.close()
+print ('Arret du serveur.')
+serveur.close()
