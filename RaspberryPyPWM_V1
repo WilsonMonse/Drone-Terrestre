@@ -1,0 +1,63 @@
+
+import RPi.GPIO as GPIO #import the RPi.GPIO library
+
+
+
+from time import sleep #import the sleep from time library
+
+
+#declare the GPIO 19 and 12 pins for the outputs servos
+turnLeftMotor = 19
+turnRightMotor = 12
+ 
+#define the behaviour of the turnLeftMotor and turnRightMotor  as outputs
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(turnLeftMotor,GPIO.OUT)
+GPIO.setup(turnRightMotor,GPIO.OUT)
+
+
+
+GPIO.setwarnings(False)#ignore the warnings
+
+
+#create PWMs instance with frequency 100 Hz ?
+PWM1 = GPIO.PWM(turnLeftMotor,100)
+PWM2 = GPIO.PWM(turnRightMotor,100)
+
+#start the PWM at 0 duty cycle
+PWM1.start(0)
+PWM2.start(0)
+#sleep(5) 
+
+
+#initialise the infinite while loop
+while True:
+
+        
+    #initialise the for loop
+    for duty in range(5,25):
+        #changing the duty cycle according to the value of for loop
+        PWM1.ChangeDutyCycle(duty)
+        print ("moteur droit")
+        sleep(1)#Delay 2s
+        
+    
+    print ("fin moteur droit") 
+    duty=15 # rapport cyclique de l'arret 
+    PWM1.ChangeDutyCycle(duty)
+    sleep(5) 
+    
+        #initialise the for loop
+    for duty in range(5,25):
+
+        #changing the duty cycle according to the value of for loop
+        PWM2.ChangeDutyCycle(duty)
+        print ("moteur gauche") 
+        sleep(1)#Delay 0.5s 
+
+    duty=15 # rapport cyclique de l'arret 
+    PWM2.ChangeDutyCycle(duty)    
+    sleep(5) 
+    print ("fin moteur gauche")      
+
+        
