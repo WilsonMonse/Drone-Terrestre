@@ -16,7 +16,6 @@
  *  Modification History:
  *    JUN 14 (LG): v0.1   - Original release
  *	  JUN 14 (LG): v0.1.1 - Added server closing management.
- * 	  JUN 20 (LG): v0.2.0 - Added management of controller's sensitivity.
  * 
  *  Copyright (c) T-REX TEAM IUT CACHAN LP MECSE
  *  All rights reserved.
