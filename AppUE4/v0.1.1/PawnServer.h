@@ -11,7 +11,6 @@
  *
  *  Modification History:
  *    JUN 14 (LG): Original release
- *	  JUN 20 (LG): Added management of controller's sensitivity.
  * 
  *  Copyright (c) T-REX TEAM IUT CACHAN LP MECSE
  *  All rights reserved.
