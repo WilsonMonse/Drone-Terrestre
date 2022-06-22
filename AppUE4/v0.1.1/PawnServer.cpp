@@ -64,7 +64,6 @@ void APawnServer::Tick(float DeltaTime)
 
 }
 
-
 int APawnServer::initiateServer() {
 
 	WSADATA wsa;
@@ -157,7 +156,6 @@ int APawnServer::initiateServer() {
 	return 0;
 }
 
-
 int APawnServer::checkForClientConnection() {
 
 	UE_LOG(LogTemp, Warning, TEXT(">>> SERVER: Waiting for client to connect.\n"));
@@ -180,7 +178,6 @@ int APawnServer::checkForClientConnection() {
 
 	return 0;
 }
-
 
 void APawnServer::sendLeftControllerPressed() {
 	const char* sendBuffer = "$l1";
@@ -212,7 +209,6 @@ void APawnServer::sendLeftControllerReleased()
 
 	UE_LOG(LogTemp, Warning, TEXT(">>> SERVER: LEFT CONTROLLER RELEASED DATA SENT\n"));
 }
-
 
 void APawnServer::sendRightControllerPressed() 
 {
